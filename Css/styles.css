@@ -25,15 +25,19 @@ header {
     height: 90px;
     width: 100%;
     position: fixed;
+    display: flex;
+    align-items: center;
 }
 
 footer {
-    max-height: 302px;
+    height: 302px;
     text-align: center;
     font-size: 14px;
     font-weight: 400;
     color: var(--color-white);
     background-color: var(--color-dark-grey);
+    display: flex;
+    align-items: center;
 }
 
 .container {
@@ -43,12 +47,12 @@ footer {
     padding: 0 10px;
 }
 
-.nav-main {
+.nav-container {
     display: flex;
     justify-content: space-between;
 }
 
-.nav-main img {
+.nav-container img {
     width: 62px;
 }
 
@@ -56,7 +60,8 @@ footer {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--color-white);
-    padding: 27px 0;
+    display: flex;
+    align-items: center;
 }
 
 .menu-itens {
@@ -130,6 +135,7 @@ footer {
 
 .load-news {
     text-align: center;
+    margin:28px 0 40px 0;
 }
 
 .load-news input {
@@ -139,7 +145,6 @@ footer {
     background-color: var(--color-light-pink);
     border-radius: 8px;
     padding: 20px 53px;
-    margin: 0 24px 40px 20px;
     border: none;
 }
 
@@ -256,21 +261,23 @@ footer {
 
 .sign-up-plataform {
     margin-bottom: 8px;
+    padding-left: 8px;
 }
 
 .sign-up-updates{
     margin: 28px 0 47px 0;
+    padding-left: 8px;
 }
 
 .sign-up-button-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 .sign-up-button1 {
    margin-bottom: 20px;
-   margin-right: 20px;
 }
 
 .sign-up-button2 {
@@ -301,13 +308,18 @@ footer {
 
 .footer-container {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .footer-contacts {
     display: flex;
     flex-direction: column;
+    padding-bottom: 37px;
+}
+
+.footer-terms {
+    padding-top: 37px;
 }
 
 @media only screen and (min-width: 768px){
@@ -317,7 +329,7 @@ footer {
     }
 
     footer {
-        min-height: 190px;
+        max-height: 190px;
     }
     
     .menu-itens li {
@@ -326,10 +338,6 @@ footer {
         font-size: 14px;
         font-weight: 500;
         color: var(--color-white);
-    }
-
-    .horizontal-line{
-        width: 700px;
     }
 
     .nav-title {
@@ -353,13 +361,19 @@ footer {
     }
 
     .load-news {
-        margin: 12px 0 56px 0;
+        margin: 40px 0 56px 0;
         padding: 0;
         border: none;
     }
 
     .games-card {
-        margin: 0 15px;
+        margin: 70px 15px 0 15px;
+    }
+
+    .games-card {
+        background-color: var(--color-white);
+        margin-top: 27px;
+        border-radius: 8px;
     }
 
     .card-sign-up {
@@ -375,13 +389,25 @@ footer {
     }
 
     .sign-up-button1 {
-        margin-right: 52px;
+        margin-right: 26px;
      }
-}
 
-@media only screen and (min-width: 1200px){
+     .sign-up-button2 {
+        margin-left: 26px;
+     }
+
+     .footer-container {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+     }
+
+     .footer-contacts {
+        padding: 0;
+     }
+
+     .footer-terms {
+        padding: 0;
+     }
     
-    .horizontal-line{
-        width: 909px;
-    }
 }
